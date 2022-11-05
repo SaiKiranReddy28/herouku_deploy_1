@@ -1,0 +1,7 @@
+pandas>=0.19
+numpy>=1.9.2
+Flask==2.0.3
+gunicorn==19.9.0
+Jinja==2.10.1
+matplotlib>=1.4.3
+MarkupSafe==1.1.1

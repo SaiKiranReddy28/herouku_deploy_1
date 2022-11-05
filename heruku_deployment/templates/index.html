@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Taxi_Price</title>
+  </head>
+  <body>
+    <h1>
+      Enter details below </h1>
+    <form action="/predict" method="post">
+      <input type="text" name="pickup_longitude"  required="required" />
+      <br>
+      <input type="text" name="pickup_latitude" placehodler="pickup_latitude" required="required"  />
+      <br>
+      <input type="text" name="dropoff_longitude" placehodler="dropoff_longitude" required="required" />
+      <br>
+      <input type="text" name="dropoff_latitude" placehodler="dropoff_longitude" required="required" />
+      <br>
+      <input type="text" name="passanger_count" placehodler="passanger_count" required="required" />
+      <br>
+      <input type="text" name="day" placehodler="dayofweek" required="required" />
+      <br>
+      <input type="text" name="time" placehodler="time" required="required" />
+      <br>
+      <input type="text" name="distance" placehodler="distance" required="required" />
+      <br>
+      
+      <button  type="submit" >Predict</button>
+    </form>
+    
+    <br>
+    <br>
+    {{prediction_text}}
+  </body>
+</html>
