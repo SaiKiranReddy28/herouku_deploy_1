@@ -8,27 +8,50 @@
     <h1>
       Enter details below </h1>
     <form action="/predict" method="post">
+      <h6>
+        Enter pickup_longitude:
+      </h6>
       <input type="text" name="pickup_longitude"  required="required" />
       <br>
+       <h6>
+        Enter pickup_latitude:
+      </h6>
       <input type="text" name="pickup_latitude" placehodler="pickup_latitude" required="required"  />
       <br>
+       <h6>
+        Enter dropoff_longitude:
+      </h6>
       <input type="text" name="dropoff_longitude" placehodler="dropoff_longitude" required="required" />
       <br>
+        <h6>
+        Enter dropoff_latitude:
+      </h6>
       <input type="text" name="dropoff_latitude" placehodler="dropoff_longitude" required="required" />
       <br>
+        <h6>
+        Enter Passanger_Count:
+      </h6>
       <input type="text" name="passanger_count" placehodler="passanger_count" required="required" />
       <br>
+        <h6>
+        Enter Day of the Week:
+      </h6>
       <input type="text" name="day" placehodler="dayofweek" required="required" />
       <br>
+       <h6>
+        Enter Hour in 24hrs format:
+      </h6>
       <input type="text" name="time" placehodler="time" required="required" />
       <br>
-      <input type="text" name="distance" placehodler="distance" required="required" />
+       <br>
+    {{distance}}
+  
       <br>
-      
       <button  type="submit" >Predict</button>
     </form>
     
     <br>
+    <input type="reset">
     <br>
     {{prediction_text}}
   </body>
