@@ -39,6 +39,20 @@ val=[]
 for a,b,c,d in zip(df["pickup_longitude"],df["pickup_latitude"],df["dropoff_longitude"],df["dropoff_latitude"]):
     val.append(haversine(a,b,c,d))
 df["distance"]=np.array(val)
+#visualizing the pickup_co-ordinates
+city_long_border=(-74.03,-73.75)
+city_lat_border=(40.62,40.85)
+plt.scatter(df["pickup_longitude"],df["pickup_latitude"],alpha=0.3)
+plt.title("pick_up")
+plt.ylim(city_lat_border)
+plt.xlim(city_long_border)
+#visualizing the dropoff_co-ordinates
+city_long_border=(-74.03,-73.75)
+city_lat_border=(40.62,40.85)
+plt.scatter(df["dropoff_longitude"],df["dropoff_latitude"],alpha=0.2)
+plt.title("drop_off")
+plt.ylim(city_lat_border)
+plt.xlim(city_long_border)
 
 from sklearn.preprocessing import StandardScaler
 sd=StandardScaler()
